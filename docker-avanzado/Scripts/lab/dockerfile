@@ -1,0 +1,10 @@
+from ubuntu:latest
+
+COPY script.sh /usr/local/bin/script.sh
+RUN chmod +x /usr/local/bin/script.sh
+RUN /usr/local/bin/script.sh
+
+RUN  echo "inicion de script" &&\
+echo "ejecutando tarea1" &&\
+echo "ejecutando tarea2"&&\
+echo "script finalizado"

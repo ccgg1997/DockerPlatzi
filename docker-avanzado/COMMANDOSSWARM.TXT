@@ -1,0 +1,11 @@
+DOCKER SWARM INIT
+docker service create --name web --replicas 3 -p 80:80 nginx
+DOCKER SERVICE SCALE WEB=5
+
+DOCKER SERVICE RM WEB
+
+
+--USANDO COMPOSE
+ docker stack deploy -c docker-compose.yml mi_despliegue
+docker service rm mi_despliegue_app
+
